@@ -1,0 +1,489 @@
+@SPK@include("partials/mainhead.html")
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    @SPK@include("partials/switcher.html")
+    @SPK@include("partials/loader.html")
+
+    <div class="page">
+        @SPK@include("partials/header.html")
+        @SPK@include("partials/sidebar.html")
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                @SPK@include("partials/page-header.html", {"title": "Projects List", "subtitle": 'Projects'})
+
+                <!-- Start::row-1 -->
+                <div class="row">
+                    <div class="col-md-12 col-xl-12">
+                        <div class="card custom-card">
+                            <div class="card-body p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="fs-18 fw-normal">All Projects</div>
+                                    <div class="">
+                                        <div class="custom-btns">
+                                            <a aria-label="anchor" href="projects.html" class="btn btn-outline-primary btn-wave me-1">
+                                                <i class="bi bi-grid"></i>
+                                            </a>
+                                            <a aria-label="anchor" class="btn btn-primary btn-wave" href="javascript:void(0);">
+                                                <i class="bi bi-list"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12">
+                        <div class="card custom-card">
+                            <div class="card-body project-list-table-container">
+                                <div class="d-sm-flex align-items-center justify-content-between mb-3">
+                                    <div class="table-entries-count">
+                                        <select class="form-control" data-trigger name="choices-single-default">
+                                            <option value="Choice 1">10</option>
+                                            <option value="Choice 2">25</option>
+                                            <option value="Choice 3">50</option>
+                                            <option value="Choice 4">100</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group table-entries-search mt-2 mt-sm-0">
+                                        <input type="text" class="form-control" placeholder="Search ...">
+                                    </div>
+                                </div>
+                                <div class="table-responsive project-list-table">
+                                    <table id="project-table" class="table text-nowrap mb-0 table-bordered border-top border-bottom">
+                                        <thead class="table-head">
+                                            <tr>
+                                                <th scope="col" class="bg-transparent border-bottom-0 w-5">S.no</th>
+                                                <th scope="col" class="bg-transparent border-bottom-0">Title</th>
+                                                <th scope="col" class="bg-transparent border-bottom-0">Tasks</th>
+                                                <th scope="col" class="bg-transparent border-bottom-0">Date</th>
+                                                <th scope="col" class="bg-transparent border-bottom-0">Members</th>
+                                                <th scope="col" class="bg-transparent border-bottom-0">Due Date</th>
+                                                <th scope="col" class="bg-transparent border-bottom-0">Progress</th>
+                                                <th scope="col" class="bg-transparent border-bottom-0">Submitted Date</th>
+                                                <th scope="col" class="bg-transparent border-bottom-0">Status</th>
+                                                <th scope="col" class="bg-transparent border-bottom-0">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-body">
+                                            <tr>
+                                                <td>01.</td>
+                                                <td>Web Designing</td>
+                                                <td>28</td>
+                                                <td>10 Aug 21</td>
+                                                <td>
+                                                    <div class="avatar-list avatar-list-stacked">
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/9.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/8.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/11.jpg" alt=""></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/1.jpg" alt=""></span>
+                                                        <span class="avatar bradius bg-primary">+15</span>
+                                                    </div>
+                                                </td>
+                                                <td>11 Nov 21</td>
+                                                <td>
+                                                    <div class="progress progress-xs" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip" data-bs-original-title="35%">
+                                                        <div class="progress-bar bg-warning" style="width: 35%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>---</td>
+                                                <td>
+                                                    <span class="mb-0 fs-12 badge rounded-pill bg-warning-transparent fw-medium">On Hold</span>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-stretch">
+                                                        <a aria-label="anchor" class="btn btn-sm btn-outline-secondary border me-2" data-bs-toggle="tooltip" data-bs-original-title="Delete">
+                                                            <i class="fe fe-trash"></i>
+                                                        </a>
+                                                        <a aria-label="anchor" href="javascript:void(0);" class="border br-5 px-2 py-1 text-muted d-flex align-items-center" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-start folder-options">
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-edit me-2 d-inline-flex"></i> Edit</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-share me-2 d-inline-flex"></i> Share</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-download me-2 d-inline-flex"></i> Clone</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>02.</td>
+                                                <td>Cloud Computing</td>
+                                                <td>58</td>
+                                                <td>21 Jan 21</td>
+                                                <td>
+                                                    <div class="avatar-list">
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/9.jpg" alt=""></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/8.jpg" alt=""></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/11.jpg" alt=""></span>
+                                                    </div>
+                                                </td>
+                                                <td>16 Apr 21</td>
+                                                <td>
+                                                    <div class="progress progress-xs" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip" data-bs-original-title="62%">
+                                                        <div class="progress-bar bg-info" style="width: 62%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>---</td>
+                                                <td>
+                                                    <span class="mb-0 fs-12 badge rounded-pill bg-info-transparent text-info fw-medium">In Progress</span>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-stretch">
+                                                        <a aria-label="anchor" class="btn btn-sm btn-outline-secondary border me-2" data-bs-toggle="tooltip" data-bs-original-title="Delete">
+                                                            <i class="fe fe-trash"></i>
+                                                        </a>
+                                                        <a aria-label="anchor" href="javascript:void(0);" class="border br-5 px-2 py-1 text-muted d-flex align-items-center" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-start folder-options">
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-edit me-2 d-inline-flex"></i> Edit</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-share me-2 d-inline-flex"></i> Share</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-download me-2 d-inline-flex"></i> Clone</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>03.</td>
+                                                <td>Ethical Hacking</td>
+                                                <td>75</td>
+                                                <td>21 Jul 17</td>
+                                                <td>
+                                                    <div class="avatar-list avatar-list-stacked">
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/9.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/8.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/11.jpg" alt=""></span>
+                                                        <span class="avatar bradius bg-primary">+3</span>
+                                                    </div>
+                                                </td>
+                                                <td>---</td>
+                                                <td>
+                                                    <div class="progress progress-xs" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip" data-bs-original-title="100%">
+                                                        <div class="progress-bar bg-primary" style="width: 100%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>21 Mar 18</td>
+                                                <td>
+                                                    <span class="mb-0 fs-12 badge rounded-pill bg-primary-transparent fw-medium">Completed</span>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-stretch">
+                                                        <a aria-label="anchor" class="btn btn-sm btn-outline-secondary border me-2" data-bs-toggle="tooltip" data-bs-original-title="Delete">
+                                                            <i class="fe fe-trash"></i>
+                                                        </a>
+                                                        <a aria-label="anchor" href="javascript:void(0);" class="border br-5 px-2 py-1 text-muted d-flex align-items-center" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-start folder-options">
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-edit me-2 d-inline-flex"></i> Edit</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-share me-2 d-inline-flex"></i> Share</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-download me-2 d-inline-flex"></i> Clone</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>04.</td>
+                                                <td>SEO Using React</td>
+                                                <td>118</td>
+                                                <td>24 Apr 21</td>
+                                                <td>
+                                                    <div class="avatar-list avatar-list-stacked">
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/9.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/8.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/11.jpg" alt=""></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/9.jpg" alt="img"></span>
+                                                        <span class="avatar bradius bg-primary">+5</span>
+                                                    </div>
+                                                </td>
+                                                <td>25 Nov 21</td>
+                                                <td>
+                                                    <div class="progress progress-xs" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip" data-bs-original-title="15%">
+                                                        <div class="progress-bar bg-danger" style="width: 15%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>---</td>
+                                                <td>
+                                                    <span class="mb-0 fs-12 badge rounded-pill bg-warning-transparent fw-medium">On Hold</span>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-stretch">
+                                                        <a aria-label="anchor" class="btn btn-sm btn-outline-secondary border me-2" data-bs-toggle="tooltip" data-bs-original-title="Delete">
+                                                            <i class="fe fe-trash"></i>
+                                                        </a>
+                                                        <a aria-label="anchor" href="javascript:void(0);" class="border br-5 px-2 py-1 text-muted d-flex align-items-center" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-start folder-options">
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-edit me-2 d-inline-flex"></i> Edit</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-share me-2 d-inline-flex"></i> Share</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-download me-2 d-inline-flex"></i> Clone</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>05.</td>
+                                                <td>System Design</td>
+                                                <td>116</td>
+                                                <td>24 Jan 21</td>
+                                                <td>
+                                                    <div class="avatar-list avatar-list-stacked">
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/9.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/8.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/11.jpg" alt=""></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/12.jpg" alt=""></span>
+                                                        <span class="avatar bradius bg-primary">+6</span>
+                                                    </div>
+                                                </td>
+                                                <td>---</td>
+                                                <td>
+                                                    <div class="progress progress-xs" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip" data-bs-original-title="100%">
+                                                        <div class="progress-bar bg-primary" style="width: 100%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>16 May 21</td>
+                                                <td>
+                                                    <span class="mb-0 fs-12 badge rounded-pill bg-primary-transparent fw-medium">Completed</span>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-stretch">
+                                                        <a aria-label="anchor" class="btn btn-sm btn-outline-secondary border me-2" data-bs-toggle="tooltip" data-bs-original-title="Delete">
+                                                            <i class="fe fe-trash"></i>
+                                                        </a>
+                                                        <a aria-label="anchor" href="javascript:void(0);" class="border br-5 px-2 py-1 text-muted d-flex align-items-center" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-start folder-options">
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-edit me-2 d-inline-flex"></i> Edit</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-share me-2 d-inline-flex"></i> Share</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-download me-2 d-inline-flex"></i> Clone</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>06.</td>
+                                                <td>Login Authentication</td>
+                                                <td>15</td>
+                                                <td>16 Apr 21</td>
+                                                <td>
+                                                    <div class="avatar-list">
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/9.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/8.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/11.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/1.jpg" alt="img"></span>
+                                                    </div>
+                                                </td>
+                                                <td>---</td>
+                                                <td>
+                                                    <div class="progress progress-xs" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip" data-bs-original-title="100%">
+                                                        <div class="progress-bar bg-primary" style="width: 100%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>29 Dec 21</td>
+                                                <td>
+                                                    <span class="mb-0 fs-12 badge rounded-pill bg-primary-transparent fw-medium">Completed</span>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-stretch">
+                                                        <a aria-label="anchor" class="btn btn-sm btn-outline-secondary border me-2" data-bs-toggle="tooltip" data-bs-original-title="Delete">
+                                                            <i class="fe fe-trash"></i>
+                                                        </a>
+                                                        <a aria-label="anchor" href="javascript:void(0);" class="border br-5 px-2 py-1 text-muted d-flex align-items-center" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-start folder-options">
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-edit me-2 d-inline-flex"></i> Edit</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-share me-2 d-inline-flex"></i> Share</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-download me-2 d-inline-flex"></i> Clone</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>07.</td>
+                                                <td>Web Designing</td>
+                                                <td>28</td>
+                                                <td>10 Aug 21</td>
+                                                <td>
+                                                    <div class="avatar-list avatar-list-stacked">
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/9.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/8.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/11.jpg" alt=""></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/1.jpg" alt=""></span>
+                                                        <span class="avatar bradius bg-primary">+15</span>
+                                                    </div>
+                                                </td>
+                                                <td>11 Nov 21</td>
+                                                <td>
+                                                    <div class="progress progress-xs" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip" data-bs-original-title="35%">
+                                                        <div class="progress-bar bg-warning" style="width: 35%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>---</td>
+                                                <td>
+                                                    <span class="mb-0 fs-12 badge rounded-pill bg-warning-transparent fw-medium">On Hold</span>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-stretch">
+                                                        <a aria-label="anchor" class="btn btn-sm btn-outline-secondary border me-2" data-bs-toggle="tooltip" data-bs-original-title="Delete">
+                                                            <i class="fe fe-trash"></i>
+                                                        </a>
+                                                        <a aria-label="anchor" href="javascript:void(0);" class="border br-5 px-2 py-1 text-muted d-flex align-items-center" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-start folder-options">
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-edit me-2 d-inline-flex"></i> Edit</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-share me-2 d-inline-flex"></i> Share</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-download me-2 d-inline-flex"></i> Clone</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>08.</td>
+                                                <td>Server Side Validation</td>
+                                                <td>58</td>
+                                                <td>21 Jan 21</td>
+                                                <td>
+                                                    <div class="avatar-list">
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/9.jpg" alt=""></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/8.jpg" alt=""></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/11.jpg" alt=""></span>
+                                                    </div>
+                                                </td>
+                                                <td>16 Apr 21</td>
+                                                <td>
+                                                    <div class="progress progress-xs" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip" data-bs-original-title="55%">
+                                                        <div class="progress-bar bg-info" style="width: 55%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>---</td>
+                                                <td>
+                                                    <span class="mb-0 fs-12 badge rounded-pill bg-info-transparent text-info fw-medium">In Progress</span>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-stretch">
+                                                        <a aria-label="anchor" class="btn btn-sm btn-outline-secondary border me-2" data-bs-toggle="tooltip" data-bs-original-title="Delete">
+                                                            <i class="fe fe-trash"></i>
+                                                        </a>
+                                                        <a aria-label="anchor" href="javascript:void(0);" class="border br-5 px-2 py-1 text-muted d-flex align-items-center" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-start folder-options">
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-edit me-2 d-inline-flex"></i> Edit</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-share me-2 d-inline-flex"></i> Share</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-download me-2 d-inline-flex"></i> Clone</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>09.</td>
+                                                <td>Database Administration</td>
+                                                <td>75</td>
+                                                <td>21 Jul 17</td>
+                                                <td>
+                                                    <div class="avatar-list avatar-list-stacked">
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/9.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/8.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/11.jpg" alt=""></span>
+                                                        <span class="avatar bradius bg-primary">+3</span>
+                                                    </div>
+                                                </td>
+                                                <td>---</td>
+                                                <td>
+                                                    <div class="progress progress-xs" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip" data-bs-original-title="100%">
+                                                        <div class="progress-bar bg-primary" style="width: 100%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>21 Mar 18</td>
+                                                <td>
+                                                    <span class="mb-0 fs-12 badge rounded-pill bg-primary-transparent fw-medium">Completed</span>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-stretch">
+                                                        <a aria-label="anchor" class="btn btn-sm btn-outline-secondary border me-2" data-bs-toggle="tooltip" data-bs-original-title="Delete">
+                                                            <i class="fe fe-trash"></i>
+                                                        </a>
+                                                        <a aria-label="anchor" href="javascript:void(0);" class="border br-5 px-2 py-1 text-muted d-flex align-items-center" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-start folder-options">
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-edit me-2 d-inline-flex"></i> Edit</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-share me-2 d-inline-flex"></i> Share</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-download me-2 d-inline-flex"></i> Clone</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10.</td>
+                                                <td>SEO Using React</td>
+                                                <td>118</td>
+                                                <td>24 Apr 21</td>
+                                                <td>
+                                                    <div class="avatar-list avatar-list-stacked">
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/9.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/8.jpg" alt="img"></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/11.jpg" alt=""></span>
+                                                        <span class="avatar bradius cover-image"><img src="../assets/images/users/9.jpg" alt="img"></span>
+                                                        <span class="avatar bradius bg-primary">+5</span>
+                                                    </div>
+                                                </td>
+                                                <td>25 Nov 21</td>
+                                                <td>
+                                                    <div class="progress progress-xs" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip" data-bs-original-title="25%">
+                                                        <div class="progress-bar bg-danger" style="width: 25%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>---</td>
+                                                <td>
+                                                    <span class="mb-0 fs-12 badge rounded-pill bg-warning-transparent fw-medium">On Hold</span>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-stretch">
+                                                        <a aria-label="anchor" class="btn btn-sm btn-outline-secondary border me-2" data-bs-toggle="tooltip" data-bs-original-title="Delete">
+                                                            <i class="fe fe-trash"></i>
+                                                        </a>
+                                                        <a aria-label="anchor" href="javascript:void(0);" class="border br-5 px-2 py-1 text-muted d-flex align-items-center" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-start folder-options">
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-edit me-2 d-inline-flex"></i> Edit</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-share me-2 d-inline-flex"></i> Share</a>
+                                                            <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-download me-2 d-inline-flex"></i> Clone</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mt-3">
+                                    <div>
+                                        <span class="text-default">Showing 1 to 10 of 10 entries</span>
+                                    </div>
+                                    <div>
+                                        <nav aria-label="..." class="me-3">
+                                            <ul class="pagination mb-0">
+                                                <li class="page-item disabled"><a class="page-link">Previous</a></li>
+                                                <li class="page-item active" aria-current="page"><a class="page-link" href="javascript:void(0);">1</a></li>
+                                                <li class="page-item disabled"><a class="page-link" href="javascript:void(0);">Next</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        @SPK@include("partials/headersearch_modal.html")
+        @SPK@include("partials/footer.html")
+
+    </div>
+
+    @SPK@include("partials/commonjs.html")
+
+    @SPK@include("partials/custom_switcherjs.html")
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>

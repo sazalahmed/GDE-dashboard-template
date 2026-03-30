@@ -1,0 +1,252 @@
+@SPK@include("partials/mainhead.html")
+
+<link rel="stylesheet" href="../assets/libs/sweetalert2/sweetalert2.min.css">
+
+</head>
+
+<body>
+
+    @SPK@include("partials/switcher.html")
+    @SPK@include("partials/loader.html")
+
+    <div class="page">
+        @SPK@include("partials/header.html")
+        @SPK@include("partials/sidebar.html")
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                @SPK@include("partials/page-header.html", {"title": "Cart", "subtitle": 'E-Commerce'})
+
+                <!-- Start::row-1 -->
+                <div class="row">
+                    <div class="col-xl-8 col-md-12">
+                        <div class="card custom-card" id="cart-container-delete">
+                            <div class="card-header">
+                                <h4 class="card-title">Shopping Cart</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table text-nowrap border table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="text-center">S.No.</th>
+                                                <th scope="col">Preview</th>
+                                                <th scope="col">Title</th>
+                                                <th scope="col">Price</th>
+                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <span>1</span>
+                                                </td>
+                                                <td><img src="../assets/images/pngs/1.png" class="cart-img" alt="cart-img"></td>
+                                                <td>Digital Camera Pro 30.2MP With Lens</td>
+                                                <td>$3,950</td>
+                                                <td>
+                                                    <input type="number" class="form-control number-format text-center" value="1">
+                                                </td>
+                                                <td>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-danger-light me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Save for Wishlist"><i class="ri-heart-line fs-18"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-info-light me-1 btn-delete" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><i class="ri-delete-bin-6-line fs-18"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <span>2</span>
+                                                </td>
+                                                <td><img src="../assets/images/pngs/4.png" class="cart-img" alt="cart-img"></td>
+                                                <td>Attractive Multi Color Flower Pot - Combo Of 3</td>
+                                                <td>$105</td>
+                                                <td>
+                                                    <input type="number" class="form-control number-format text-center" value="3">
+                                                </td>
+                                                <td>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-danger-light me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Save for Wishlist"><i class="ri-heart-line fs-18"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-info-light me-1 btn-delete" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><i class="ri-delete-bin-6-line fs-18"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <span>3</span>
+                                                </td>
+                                                <td><img src="../assets/images/pngs/2.png" class="cart-img" alt="cart-img"></td>
+                                                <td>Wireless Bluetooth Game Controller Joystick</td>
+                                                <td>$945</td>
+                                                <td>
+                                                    <input type="number" class="form-control number-format text-center" value="3">
+                                                </td>
+                                                <td>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-danger-light me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Save for Wishlist"><i class="ri-heart-line fs-18"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-info-light me-1 btn-delete" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><i class="ri-delete-bin-6-line fs-18"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <span>4</span>
+                                                </td>
+                                                <td><img src="../assets/images/pngs/5.png" class="cart-img" alt="cart-img"></td>
+                                                <td>Long Arm Rechargeable Study Desk Lamp</td>
+                                                <td>$105</td>
+                                                <td>
+                                                    <input type="number" class="form-control number-format text-center" value="2">
+                                                </td>
+                                                <td>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-danger-light me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Save for Wishlist"><i class="ri-heart-line fs-18"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-info-light me-1 btn-delete" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><i class="ri-delete-bin-6-line fs-18"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <span>5</span>
+                                                </td>
+                                                <td><img src="../assets/images/pngs/6.png" class="cart-img" alt="cart-img"></td>
+                                                <td>Wood Photo Frame(M) With Wall Decorators</td>
+                                                <td>$106</td>
+                                                <td>
+                                                    <input type="number" class="form-control number-format text-center" value="5">
+                                                </td>
+                                                <td>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-danger-light me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Save for Wishlist"><i class="ri-heart-line fs-18"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-info-light me-1 btn-delete" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><i class="ri-delete-bin-6-line fs-18"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <span>6</span>
+                                                </td>
+                                                <td><img src="../assets/images/pngs/9.png" class="cart-img" alt="cart-img"></td>
+                                                <td>Rounded Shape Digital Watch For Men</td>
+                                                <td>$230</td>
+                                                <td>
+                                                    <input type="number" class="form-control number-format text-center" value="1">
+                                                </td>
+                                                <td>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-danger-light me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Save for Wishlist"><i class="ri-heart-line fs-18"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-info-light me-1 btn-delete" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><i class="ri-delete-bin-6-line fs-18"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <span>7</span>
+                                                </td>
+                                                <td><img src="../assets/images/pngs/8.png" class="cart-img" alt="cart-img"></td>
+                                                <td>Analog Wall Clock - 30cm × 30cm</td>
+                                                <td>$110</td>
+                                                <td>
+                                                    <input type="number" class="form-control number-format text-center" value="1">
+                                                </td>
+                                                <td>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-danger-light me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Save for Wishlist"><i class="ri-heart-line fs-18"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-sm btn-square btn-info-light me-1 btn-delete" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"><i class="ri-delete-bin-6-line fs-18"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card custom-card d-none" id="cart-empty-cart">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Empty Cart
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="cart-empty text-center">
+									<svg xmlns="http://www.w3.org/2000/svg" class="svg-muted" width="24" height="24" viewbox="0 0 24 24"><path d="M18.6 16.5H8.9c-.9 0-1.6-.6-1.9-1.4L4.8 6.7c0-.1 0-.3.1-.4.1-.1.2-.1.4-.1h17.1c.1 0 .3.1.4.2.1.1.1.3.1.4L20.5 15c-.2.8-1 1.5-1.9 1.5zM5.9 7.1 8 14.8c.1.4.5.8 1 .8h9.7c.5 0 .9-.3 1-.8l2.1-7.7H5.9z"/><path d="M6 10.9 3.7 2.5H1.3v-.9H4c.2 0 .4.1.4.3l2.4 8.7-.8.3zM8.1 18.8 6 11l.9-.3L9 18.5z"/><path d="M20.8 20.4h-.9V20c0-.7-.6-1.3-1.3-1.3H8.9c-.7 0-1.3.6-1.3 1.3v.5h-.9V20c0-1.2 1-2.2 2.2-2.2h9.7c1.2 0 2.2 1 2.2 2.2v.4z"/><path d="M8.9 22.2c-1.2 0-2.2-1-2.2-2.2s1-2.2 2.2-2.2c1.2 0 2.2 1 2.2 2.2s-1 2.2-2.2 2.2zm0-3.5c-.7 0-1.3.6-1.3 1.3 0 .7.6 1.3 1.3 1.3.8 0 1.3-.6 1.3-1.3 0-.7-.5-1.3-1.3-1.3zM18.6 22.2c-1.2 0-2.2-1-2.2-2.2s1-2.2 2.2-2.2c1.2 0 2.2 1 2.2 2.2s-.9 2.2-2.2 2.2zm0-3.5c-.8 0-1.3.6-1.3 1.3 0 .7.6 1.3 1.3 1.3.7 0 1.3-.6 1.3-1.3 0-.7-.5-1.3-1.3-1.3z"/></svg>
+									<h3 class="fw-bold mb-1">Your Cart is Empty</h3>
+									<h5 class="mb-3">Add some items to make me happy :)</h5>
+									<a href="products.html" class="btn btn-primary btn-wave m-3" data-abc="true">continue shopping <i class="bi bi-arrow-right ms-1"></i></a>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-12">
+                        <div class="card custom-card">
+                            <div class="card-header">
+                                <h4 class="card-title">Have coupon?</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Coupon code" aria-describedby="button-addon">
+                                    <button class="btn btn-primary" type="button" id="button-addon">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card custom-card">
+                            <div class="card-header">
+                                <h4 class="card-title">Price Details</h4>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td>Sub Total</td>
+                                            <td class="text-end">$4,360</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discount</td>
+                                            <td class="text-end">5%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shipping</td>
+                                            <td class="text-end">Free</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="fs-20">Total</span>
+                                            </td>
+                                            <td class="text-end">
+                                                <span class="fs-20">$3,976</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card-footer">
+                                <div class="text-end">
+                                    <a href="products.html" class="btn btn-primary py-1 my-1">
+                                        <i class="ri-arrow-left-line align-middle me-1"></i>
+                                        Continue Shopping
+                                    </a>
+                                    <a href="checkout.html" class="btn btn-info py-1 my-1">
+                                        Check out
+                                        <i class="ri-arrow-right-line align-middle ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        @SPK@include("partials/headersearch_modal.html")
+        @SPK@include("partials/footer.html")
+
+    </div>
+
+    @SPK@include("partials/commonjs.html")
+
+    @SPK@include("partials/custom_switcherjs.html")
+
+    <!-- Sweetalerts JS -->
+    <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Cart JS -->
+    <script src="../assets/js/cart.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>

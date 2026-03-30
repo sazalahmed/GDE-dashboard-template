@@ -1,0 +1,286 @@
+@SPK@include("partials/mainhead.html")
+
+</head>
+
+<body>
+
+    @SPK@include("partials/switcher.html")
+    @SPK@include("partials/loader.html")
+
+    <div class="page">
+        @SPK@include("partials/header.html")
+        @SPK@include("partials/sidebar.html")
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                @SPK@include("partials/page-header.html", {"title": "Checkout", "subtitle": 'E-Commerce'})
+
+                <!-- Start::row-1 -->
+                <div class="row">
+                    <div class="col-xl-8 col-md-12">
+                        <div class="card custom-card">
+                            <div class="card-header">
+                                <h4 class="card-title">Billing Information</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="row g-3 mt-0">
+                                    <div class="col-md-6 mt-0">
+                                        <label class="form-label">First Name<span class="text-danger ms-1">*</span></label>
+                                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                                    </div>
+                                    <div class="col-md-6 mt-0">
+                                        <label class="form-label">Last Name<span class="text-danger ms-1">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Company Name<span class="text-danger ms-1">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Company name" aria-label="Company name">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Email address<span class="text-danger ms-1">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Email" aria-label="Email">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Country<span class="text-danger ms-1">*</span></label>
+                                        <select class="form-control" data-trigger name="choices-single-default" id="choices-single-default">
+                                            <option value="Choice 1">Germany</option>
+                                            <option value="Choice 2">Canada</option>
+                                            <option value="Choice 3">Usa</option>
+                                            <option value="Choice 4">Aus</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Address<span class="text-danger ms-1">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Home address" aria-label="Home address">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">City<span class="text-danger ms-1">*</span></label>
+                                        <input type="text" class="form-control" placeholder="City" aria-label="City">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Postal Code<span class="text-danger ms-1">*</span></label>
+                                        <input type="text" class="form-control" placeholder="ZIP" aria-label="ZIP">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card custom-card">
+                            <div class="card-header">
+                                <h4 class="card-title">Payment Information</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="checkout-payment-tabs">
+                                    <ul class="nav nav-justified nav-tabs nav-style-1 d-sm-flex d-block py-3 mb-3" role="tablist">
+                                        <li class="nav-item me-0" role="presentation">
+                                            <a class="nav-link active" data-bs-toggle="tab" role="tab" href="#credit-card" aria-selected="true">
+                                                <i class="ri-bank-card-fill align-middle me-2 fs-18"></i>Credit Card
+                                            </a>
+                                        </li>
+                                        <li class="nav-item me-0 mt-2 mt-sm-0" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" role="tab" href="#paypal" aria-selected="false">
+                                                <i class="ri-paypal-fill align-middle me-2 fs-18"></i>Paypal
+                                            </a>
+                                        </li>
+                                        <li class="nav-item mt-2 mt-sm-0" role="presentation">
+                                            <a class="nav-link" data-bs-toggle="tab" role="tab" href="#transfer" aria-selected="false">
+                                                <i class="ri-bank-fill align-middle me-2 fs-18"></i>Bank Transfer
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active show p-0" id="credit-card" role="tabpanel">
+                                            <form class="row g-3">
+                                                <div class="col-md-12 text-danger">Please Enter Valid Details</div>
+                                                <div class="col-md-12">
+                                                    <label class="form-label">Card Holder Name</label>
+                                                    <input type="text" class="form-control" placeholder="Full name">
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label class="form-label">Card Number</label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Search for...">
+                                                        <span class="input-group-text btn btn-sm btn-success shadow-none">
+                                                            <i class="ri-visa-fill align-middle fs-18 me-2"></i>
+                                                            <i class="ri-mastercard-line align-middle fs-18"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row pe-0">
+                                                    <div class="col-sm-8 mt-3 ps-2">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Expiration</label>
+                                                            <div class="input-group">
+                                                                <input type="number" class="form-control" placeholder="MM" name="Month">
+                                                                <input type="number" class="form-control" placeholder="YYYY" name="Year">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 mt-3 pe-0">
+                                                        <div class="form-group">
+                                                            <label class="form-label">CVV <i class="ri-question-fill align-middle"></i></label>
+                                                            <input type="number" class="form-control" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <a href="javascript:void(0);" class="btn btn-primary py-1 my-1">
+                                                        Confirm
+                                                    </a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane p-0" id="paypal" role="tabpanel">
+                                            <div class="row g-3">
+                                                <div class="col-md-12">Paypal is easiest way to pay online</div>
+                                                <div class="col">
+                                                    <a href="javascript:void(0);" class="btn btn-primary py-1">
+                                                        <i class="ri-paypal-fill align-middle"></i>
+                                                        Log in my Paypal
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-12"><strong>Note:</strong> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane p-0" id="transfer" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-md-12 mb-3">Bank account details</div>
+                                                <div class="col">
+                                                    <dl>
+														<dt class="text-dark">BANK:</dt>
+														<dd>THE UNION BANK 0456</dd>
+													</dl>
+                                                    <dl>
+														<dt class="text-dark">Account Number:</dt>
+														<dd>67542897653214</dd>
+													</dl>
+                                                    <dl>
+														<dt class="text-dark">IBAN:</dt>
+														<dd>543218769</dd>
+													</dl>
+                                                </div>
+                                                <div class="col-md-12"><strong class="text-dark">Note:</strong> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-12">
+                        <div class="card custom-card">
+                            <div class="card-header">
+                                <h4 class="card-title">Your Order</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <div class="d-flex">
+                                        <img class="cart-img" src="../assets/images/pngs/9.png" alt="img">
+                                        <div class="ms-3">
+                                            <h4 class="mb-1 fw-semibold fs-14"><a href="javascript:void(0);">Rounded Shape Digital Watch For Men</a></h4>
+                                            <div class="mb-2 text-warning fs-15">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-half-line"></i>
+                                                <i class="ri-star-line"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto my-auto">
+                                        <span class="me-4 my-auto fs-16 fw-semibold">$438</span>
+                                    </div>
+                                </div>
+                                <div class="d-md-flex mt-4">
+                                    <div class="d-flex">
+                                        <img class="cart-img" src="../assets/images/pngs/1.png" alt="img">
+                                        <div class="ms-3 mt-2">
+                                            <h4 class="mb-1 fw-semibold fs-14"><a href="javascript:void(0);">Digital Camera Pro 30.2MP With Lens</a></h4>
+                                            <div class="mb-2 text-warning fs-14">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-half-line"></i>
+                                                <i class="ri-star-line"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto my-auto">
+                                        <span class="me-4 my-auto fs-16 fw-semibold">$765</span>
+                                    </div>
+                                </div>
+                                <div class="d-md-flex mt-4">
+                                    <div class="d-flex">
+                                        <img class="cart-img" src="../assets/images/pngs/6.png" alt="img">
+                                        <div class="ms-3 mt-2">
+                                            <h4 class="mb-1 fw-semibold fs-14"><a href="javascript:void(0);">Wood Photo Frame(M) With Wall Decorators</a></h4>
+                                            <div class="mb-2 text-warning fs-14">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-line"></i>
+                                                <i class="ri-star-line"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto my-auto">
+                                        <span class="me-4 my-auto fs-16 fw-semibold">$543</span>
+                                    </div>
+                                </div>
+                                <table class="table table-borderless mt-4">
+                                    <tbody>
+                                        <tr>
+                                            <td>Sub Total</td>
+                                            <td class="text-end">$4,360</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discount</td>
+                                            <td class="text-end">5%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shipping</td>
+                                            <td class="text-end">Free</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="fs-20">Total</span>
+                                            </td>
+                                            <td class="text-end">
+                                                <span class="fs-20">$3,976</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card-footer">
+                                <div class="text-end">
+                                    <a href="javascript:void(0);" class="btn btn-primary py-1 my-1">
+                                        Place Order
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        @SPK@include("partials/headersearch_modal.html")
+        @SPK@include("partials/footer.html")
+
+    </div>
+
+    @SPK@include("partials/commonjs.html")
+
+    @SPK@include("partials/custom_switcherjs.html")
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>

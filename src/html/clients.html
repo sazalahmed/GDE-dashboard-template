@@ -1,0 +1,502 @@
+@SPK@include("partials/mainhead.html")
+
+</head>
+
+<body>
+
+    @SPK@include("partials/switcher.html")
+    @SPK@include("partials/loader.html")
+
+    <div class="page">
+        @SPK@include("partials/header.html")
+        @SPK@include("partials/sidebar.html")
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                @SPK@include("partials/page-header.html", {"title": "Clients", "subtitle": 'Clients'})
+
+                <!-- Start::row-1 -->
+                <div class="row client-cards">
+                    <div class="col-md-12 col-xl-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-xl col-lg-6 col-md-12">
+                                        <div class="btn-list">
+                                            <a href="client-create.html" class="btn btn-primary">
+                                                <i class="bi bi-plus-circle me-1"></i>Add Client
+                                            </a>
+                                            <a href="javascript:void(0);" class="btn btn-outline-primary group-update-btn">
+                                                <i class="bi bi-pencil me-1"></i>Group Update
+                                            </a>
+                                            <a href="javascript:void(0);" class="btn btn-outline-danger">
+                                                <i class="bi bi-trash me-1"></i>Delete All
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-12 mt-3 mt-lg-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search in clients.....">
+                                            <button class="btn ripple btn-primary text-fixed-white input-group-text border-0" type="button">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xl-4 col-sm-12">
+                        <div class="card custom-card client-card">
+                            <div class="card-body">
+                                <div class="client-card-top">
+                                    <div class="d-flex">
+                                        <div class="rounded-circle align-self-start mb-0">
+                                            <img src="../assets/images/users/16.jpg" alt="Generic placeholder image" class="avatar br-10 avatar-lg me-3">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);">Jeremy Gilbert</a>
+                                            <p>Spain, UN</p>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto mt-2 mt-sm-0">
+                                        <div class="btn btn-primary me-1"><i class="bi bi-chat-fill fs-12"></i></div>
+                                        <div class="btn btn-info"><i class="bi bi-telephone-fill fs-12"></i></div>
+                                    </div>
+                                </div>
+                                <div class="client-card-details">
+                                    <div>
+                                        <h6 class="d-inline-flex align-items-center">Projects<span>773</span></h6>
+                                    </div>
+                                    <div><h6 class="d-inline-flex align-items-center">Tasks<span>16</span></h6></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social">
+                                    <ul class="list-unstyled">
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Facebook" aria-label="Facebook" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Twitter" aria-label="Twitter" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="LinkedIn" aria-label="LinkedIn" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xl-4 col-sm-12">
+                        <div class="card custom-card client-card">
+                            <div class="card-body">
+                                <div class="client-card-top">
+                                    <div class="d-flex">
+                                        <div class="rounded-circle align-self-start mb-0">
+                                            <img src="../assets/images/users/1.jpg" alt="Generic placeholder image" class="avatar br-10 avatar-lg me-3">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);">Bonnie Dovan</a>
+                                            <p>Japan, UN</p>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto mt-2 mt-sm-0">
+                                        <div class="btn btn-primary me-1"><i class="bi bi-chat-fill fs-12"></i></div>
+                                        <div class="btn btn-info"><i class="bi bi-telephone-fill fs-12"></i></div>
+                                    </div>
+                                </div>
+                                <div class="client-card-details">
+                                    <div>
+                                        <h6 class="d-inline-flex align-items-center">Projects<span>1275</span></h6>
+                                    </div>
+                                    <div><h6 class="d-inline-flex align-items-center">Tasks<span>753</span></h6></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social">
+                                    <ul class="list-unstyled">
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Facebook" aria-label="Facebook" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Twitter" aria-label="Twitter" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="LinkedIn" aria-label="LinkedIn" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xl-4 col-sm-12">
+                        <div class="card custom-card client-card">
+                            <div class="card-body">
+                                <div class="client-card-top">
+                                    <div class="d-flex">
+                                        <div class="rounded-circle align-self-start mb-0">
+                                            <img src="../assets/images/users/2.jpg" alt="Generic placeholder image" class="avatar br-10 avatar-lg me-3">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);">Rebaca Wisely</a>
+                                            <p>Japan, UN</p>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto mt-2 mt-sm-0">
+                                        <div class="btn btn-primary me-1"><i class="bi bi-chat-fill fs-12"></i></div>
+                                        <div class="btn btn-info"><i class="bi bi-telephone-fill fs-12"></i></div>
+                                    </div>
+                                </div>
+                                <div class="client-card-details">
+                                    <div>
+                                        <h6 class="d-inline-flex align-items-center">Projects<span>1275</span></h6>
+                                    </div>
+                                    <div><h6 class="d-inline-flex align-items-center">Tasks<span>753</span></h6></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social">
+                                    <ul class="list-unstyled">
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Facebook" aria-label="Facebook" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Twitter" aria-label="Twitter" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="LinkedIn" aria-label="LinkedIn" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xl-4 col-sm-12">
+                        <div class="card custom-card client-card">
+                            <div class="card-body">
+                                <div class="client-card-top">
+                                    <div class="d-flex">
+                                        <div class="rounded-circle align-self-start mb-0">
+                                            <img src="../assets/images/users/15.jpg" alt="Generic placeholder image" class="avatar br-10 avatar-lg me-3">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);">Thomas Jaim</a>
+                                            <p>Japan, UN</p>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto mt-2 mt-sm-0">
+                                        <div class="btn btn-primary me-1"><i class="bi bi-chat-fill fs-12"></i></div>
+                                        <div class="btn btn-info"><i class="bi bi-telephone-fill fs-12"></i></div>
+                                    </div>
+                                </div>
+                                <div class="client-card-details">
+                                    <div>
+                                        <h6 class="d-inline-flex align-items-center">Projects<span>521</span></h6>
+                                    </div>
+                                    <div><h6 class="d-inline-flex align-items-center">Tasks<span>238</span></h6></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social">
+                                    <ul class="list-unstyled">
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Facebook" aria-label="Facebook" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Twitter" aria-label="Twitter" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="LinkedIn" aria-label="LinkedIn" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xl-4 col-sm-12">
+                        <div class="card custom-card client-card">
+                            <div class="card-body">
+                                <div class="client-card-top">
+                                    <div class="d-flex">
+                                        <div class="rounded-circle align-self-start mb-0">
+                                            <img src="../assets/images/users/3.jpg" alt="Generic placeholder image" class="avatar br-10 avatar-lg me-3">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);">Skyler Hilda</a>
+                                            <p>Japan, UN</p>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto mt-2 mt-sm-0">
+                                        <div class="btn btn-primary me-1"><i class="bi bi-chat-fill fs-12"></i></div>
+                                        <div class="btn btn-info"><i class="bi bi-telephone-fill fs-12"></i></div>
+                                    </div>
+                                </div>
+                                <div class="client-card-details">
+                                    <div>
+                                        <h6 class="d-inline-flex align-items-center">Projects<span>125</span></h6>
+                                    </div>
+                                    <div><h6 class="d-inline-flex align-items-center">Tasks<span>73</span></h6></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social">
+                                    <ul class="list-unstyled">
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Facebook" aria-label="Facebook" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Twitter" aria-label="Twitter" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="LinkedIn" aria-label="LinkedIn" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xl-4 col-sm-12">
+                        <div class="card custom-card client-card">
+                            <div class="card-body">
+                                <div class="client-card-top">
+                                    <div class="d-flex">
+                                        <div class="rounded-circle align-self-start mb-0">
+                                            <img src="../assets/images/users/5.jpg" alt="Generic placeholder image" class="avatar br-10 avatar-lg me-3">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);">Victoria jane</a>
+                                            <p>New York, UK</p>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto mt-2 mt-sm-0">
+                                        <div class="btn btn-primary me-1"><i class="bi bi-chat-fill fs-12"></i></div>
+                                        <div class="btn btn-info"><i class="bi bi-telephone-fill fs-12"></i></div>
+                                    </div>
+                                </div>
+                                <div class="client-card-details">
+                                    <div>
+                                        <h6 class="d-inline-flex align-items-center">Projects<span>113</span></h6>
+                                    </div>
+                                    <div><h6 class="d-inline-flex align-items-center">Tasks<span>19</span></h6></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social">
+                                    <ul class="list-unstyled">
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Facebook" aria-label="Facebook" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Twitter" aria-label="Twitter" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="LinkedIn" aria-label="LinkedIn" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xl-4 col-sm-12">
+                        <div class="card custom-card client-card">
+                            <div class="card-body">
+                                <div class="client-card-top">
+                                    <div class="d-flex">
+                                        <div class="rounded-circle align-self-start mb-0">
+                                            <img src="../assets/images/users/1.jpg" alt="Generic placeholder image" class="avatar br-10 avatar-lg me-3">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);">Bonnie Dovan</a>
+                                            <p>Japan, UN</p>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto mt-2 mt-sm-0">
+                                        <div class="btn btn-primary me-1"><i class="bi bi-chat-fill fs-12"></i></div>
+                                        <div class="btn btn-info"><i class="bi bi-telephone-fill fs-12"></i></div>
+                                    </div>
+                                </div>
+                                <div class="client-card-details">
+                                    <div>
+                                        <h6 class="d-inline-flex align-items-center">Projects<span>1275</span></h6>
+                                    </div>
+                                    <div><h6 class="d-inline-flex align-items-center">Tasks<span>753</span></h6></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social">
+                                    <ul class="list-unstyled">
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Facebook" aria-label="Facebook" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Twitter" aria-label="Twitter" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="LinkedIn" aria-label="LinkedIn" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xl-4 col-sm-12">
+                        <div class="card custom-card client-card">
+                            <div class="card-body">
+                                <div class="client-card-top">
+                                    <div class="d-flex">
+                                        <div class="rounded-circle align-self-start mb-0">
+                                            <img src="../assets/images/users/2.jpg" alt="Generic placeholder image" class="avatar br-10 avatar-lg me-3">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);">Rebaca Wisely</a>
+                                            <p>Japan, UN</p>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto mt-2 mt-sm-0">
+                                        <div class="btn btn-primary me-1"><i class="bi bi-chat-fill fs-12"></i></div>
+                                        <div class="btn btn-info"><i class="bi bi-telephone-fill fs-12"></i></div>
+                                    </div>
+                                </div>
+                                <div class="client-card-details">
+                                    <div>
+                                        <h6 class="d-inline-flex align-items-center">Projects<span>1275</span></h6>
+                                    </div>
+                                    <div><h6 class="d-inline-flex align-items-center">Tasks<span>753</span></h6></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social">
+                                    <ul class="list-unstyled">
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Facebook" aria-label="Facebook" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Twitter" aria-label="Twitter" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="LinkedIn" aria-label="LinkedIn" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xl-4 col-sm-12">
+                        <div class="card custom-card client-card">
+                            <div class="card-body">
+                                <div class="client-card-top">
+                                    <div class="d-flex">
+                                        <div class="rounded-circle align-self-start mb-0">
+                                            <img src="../assets/images/users/16.jpg" alt="Generic placeholder image" class="avatar br-10 avatar-lg me-3">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);">Jeremy Gilbert</a>
+                                            <p>Spain, UN</p>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto mt-2 mt-sm-0">
+                                        <div class="btn btn-primary me-1"><i class="bi bi-chat-fill fs-12"></i></div>
+                                        <div class="btn btn-info"><i class="bi bi-telephone-fill fs-12"></i></div>
+                                    </div>
+                                </div>
+                                <div class="client-card-details">
+                                    <div>
+                                        <h6 class="d-inline-flex align-items-center">Projects<span>773</span></h6>
+                                    </div>
+                                    <div><h6 class="d-inline-flex align-items-center">Tasks<span>16</span></h6></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social">
+                                    <ul class="list-unstyled">
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Facebook" aria-label="Facebook" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Twitter" aria-label="Twitter" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="LinkedIn" aria-label="LinkedIn" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xl-4 col-sm-12">
+                        <div class="card custom-card client-card">
+                            <div class="card-body">
+                                <div class="client-card-top">
+                                    <div class="d-flex">
+                                        <div class="rounded-circle align-self-start mb-0">
+                                            <img src="../assets/images/users/3.jpg" alt="Generic placeholder image" class="avatar br-10 avatar-lg me-3">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);">Skyler Hilda</a>
+                                            <p>Japan, UN</p>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto mt-2 mt-sm-0">
+                                        <div class="btn btn-primary me-1"><i class="bi bi-chat-fill fs-12"></i></div>
+                                        <div class="btn btn-info"><i class="bi bi-telephone-fill fs-12"></i></div>
+                                    </div>
+                                </div>
+                                <div class="client-card-details">
+                                    <div>
+                                        <h6 class="d-inline-flex align-items-center">Projects<span>125</span></h6>
+                                    </div>
+                                    <div><h6 class="d-inline-flex align-items-center">Tasks<span>73</span></h6></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social">
+                                    <ul class="list-unstyled">
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Facebook" aria-label="Facebook" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Twitter" aria-label="Twitter" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="LinkedIn" aria-label="LinkedIn" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xl-4 col-sm-12">
+                        <div class="card custom-card client-card">
+                            <div class="card-body">
+                                <div class="client-card-top">
+                                    <div class="d-flex">
+                                        <div class="rounded-circle align-self-start mb-0">
+                                            <img src="../assets/images/users/5.jpg" alt="Generic placeholder image" class="avatar br-10 avatar-lg me-3">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);">Victoria jane</a>
+                                            <p>New York, UK</p>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto mt-2 mt-sm-0">
+                                        <div class="btn btn-primary me-1"><i class="bi bi-chat-fill fs-12"></i></div>
+                                        <div class="btn btn-info"><i class="bi bi-telephone-fill fs-12"></i></div>
+                                    </div>
+                                </div>
+                                <div class="client-card-details">
+                                    <div>
+                                        <h6 class="d-inline-flex align-items-center">Projects<span>113</span></h6>
+                                    </div>
+                                    <div><h6 class="d-inline-flex align-items-center">Tasks<span>19</span></h6></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social">
+                                    <ul class="list-unstyled">
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Facebook" aria-label="Facebook" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Twitter" aria-label="Twitter" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="LinkedIn" aria-label="LinkedIn" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xl-4 col-sm-12">
+                        <div class="card custom-card client-card">
+                            <div class="card-body">
+                                <div class="client-card-top">
+                                    <div class="d-flex">
+                                        <div class="rounded-circle align-self-start mb-0">
+                                            <img src="../assets/images/users/15.jpg" alt="Generic placeholder image" class="avatar br-10 avatar-lg me-3">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);">Thomas Jaim</a>
+                                            <p>Japan, UN</p>
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto mt-2 mt-sm-0">
+                                        <div class="btn btn-primary me-1"><i class="bi bi-chat-fill fs-12"></i></div>
+                                        <div class="btn btn-info"><i class="bi bi-telephone-fill fs-12"></i></div>
+                                    </div>
+                                </div>
+                                <div class="client-card-details">
+                                    <div>
+                                        <h6 class="d-inline-flex align-items-center">Projects<span>521</span></h6>
+                                    </div>
+                                    <div><h6 class="d-inline-flex align-items-center">Tasks<span>238</span></h6></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="social">
+                                    <ul class="list-unstyled">
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Facebook" aria-label="Facebook" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Twitter" aria-label="Twitter" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="LinkedIn" aria-label="LinkedIn" class="btn btn-primary-transparent btn-icon rounded-circle"><i class="ri-linkedin-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        @SPK@include("partials/headersearch_modal.html")
+        @SPK@include("partials/footer.html")
+
+    </div>
+
+    @SPK@include("partials/commonjs.html")
+
+    @SPK@include("partials/custom_switcherjs.html")
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>

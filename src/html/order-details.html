@@ -1,0 +1,441 @@
+@SPK@include("partials/mainhead.html")
+
+</head>
+
+<body>
+
+    @SPK@include("partials/switcher.html")
+    @SPK@include("partials/loader.html")
+
+    <div class="page">
+        @SPK@include("partials/header.html")
+        @SPK@include("partials/sidebar.html")
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                @SPK@include("partials/page-header.html", {"title": "Order Details", "subtitle": 'Ecommerce'})
+
+                <!-- Start::row-1 -->
+                <div class="row">
+                    <div class="col-xl-3">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="card custom-card">
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            User Details
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="d-flex align-items-center border-bottom border-block-end-dashed p-3 flex-wrap">
+                                            <div class="me-2">
+                                                <span class="avatar avatar-lg avatar-rounded">
+                                                    <img src="../assets/images/faces/4.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="flex-fill">
+                                                <p class="mb-0">Millie Woodward</p>
+                                                <p class="mb-0 text-muted fs-12">personalmail@mailer.com</p>
+                                            </div>
+                                            <div>
+                                                <span class="badge bg-primary-transparent">VIP Member</span>
+                                            </div>
+                                        </div>
+                                        <div class="p-3 border-bottom border-block-end-dashed">
+                                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                                <span class="fs-14 fw-semibold">Delivery address :</span>
+                                                <a href="javascript:void(0);" class="text-primary fs-12"><i class="ri-pencil-line align-middle fs-14"></i> Edit</a>
+                                            </div>
+                                            <p class="mb-2 text-muted"><span class="fw-semibold text-default">Landmark : </span>HIG-53</p>
+                                            <p class="mb-2 text-muted"><span class="fw-semibold text-default">Street : </span>Bell14 Street</p>
+                                            <p class="mb-2 text-muted"><span class="fw-semibold text-default">City : </span>Georgetown</p>
+                                            <p class="mb-2 text-muted"><span class="fw-semibold text-default">State : </span>Washington,D.C</p>
+                                            <p class="mb-2 text-muted"><span class="fw-semibold text-default">Country : </span>USA</p>
+                                            <p class="mb-0 text-muted"><span class="fw-semibold text-default">Zipcode : </span>500071</p>
+                                        </div>
+                                        <div class="p-3 border-bottom border-block-end-dashed">
+                                            <div class="mb-3">
+                                                <span class="fs-14 fw-semibold">Send updates to :</span>
+                                            </div>
+                                            <p class="mb-2 text-muted">
+                                                <span class="fw-semibold text-default">Phone : </span>
+                                                (777)-3210-3210
+                                            </p>
+                                            <p class="mb-0 text-muted">
+                                                <span class="fw-semibold text-default">Email : </span>
+                                                personalmail@mailer.com
+                                            </p>
+                                        </div>
+                                        <div class="p-3 border-bottom border-block-end-dashed">
+                                            <div class="mb-3">
+                                                <span class="fs-14 fw-semibold">Order Summary</span>
+                                            </div>
+                                            <p class="mb-2 text-muted">
+                                                <span class="fw-semibold text-default">Ordered Date</span>
+                                                03,Nov 2023
+                                            </p>
+                                            <p class="mb-2 text-muted">
+                                                <span class="fw-semibold text-default">Ordered Time :</span>
+                                                11:47AM
+                                            </p>
+                                            <p class="mb-0 text-muted">
+                                                <span class="fw-semibold text-default">Payment Mode :</span>
+                                                Card
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">Total
+                                        <span class="text-success">28 items</span> purchased till now
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="card custom-card">
+                                    <div class="card-header d-flex justify-content-between">
+                                        <div class="card-title">
+                                            Order ID - <span class="text-primary fs-15">#SPK-22J63</span>
+                                        </div>
+                                        <div>
+                                            <span class="badge bg-primary-transparent">
+                                                Estimated delivery : 30,Nov 2022
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table text-nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Item</th>
+                                                        <th scope="col">Tracking No</th>
+                                                        <th scope="col">Price</th>
+                                                        <th scope="col">Quantity</th>
+                                                        <th scope="col">Total Price</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="me-3">
+                                                                    <span class="avatar avatar-xxl bg-light">
+                                                                        <img src="../assets/images/ecommerce/5.jpg" alt="">
+                                                                    </span>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="mb-1 fs-14 fw-semibold">
+                                                                        <a href="javascript:void(0);">20-75mm DSLR lens</a>
+                                                                    </div>
+                                                                    <div class="mb-1">
+                                                                        <span class="me-1 d-inline-flex">Size:</span><span class="text-muted">44mm</span>
+                                                                    </div>
+                                                                    <div class="mb-1">
+                                                                        <span class="me-1 d-inline-flex">Color:</span><span class="text-muted">Metallic Black</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript:void(0);" class="text-primary">SPK-1218-J36</a></td>
+                                                        <td>
+                                                            <span class="fs-15 fw-semibold">$2,599</span>
+                                                        </td>
+                                                        <td>1</td>
+                                                        <td>$2,599</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="me-3">
+                                                                    <span class="avatar avatar-xxl bg-light">
+                                                                        <img src="../assets/images/ecommerce/7.jpg" alt="">
+                                                                    </span>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="mb-1 fs-14 fw-semibold">
+                                                                        <a href="javascript:void(0);">Das &amp; Co Travel Backpack</a>
+                                                                    </div>
+                                                                    <div class="mb-1">
+                                                                        <span class="me-1 d-inline-flex">Size:</span><span class="text-muted">15L</span>
+                                                                    </div>
+                                                                    <div class="mb-1">
+                                                                        <span class="me-1 d-inline-flex">Color:</span><span class="text-muted">Brown<span class="badge bg-success ms-2">Deal Price</span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript:void(0);" class="text-primary">SPK-3789-R89</a></td>
+                                                        <td>
+                                                            <span class="fs-15 fw-semibold">$399</span>
+                                                        </td>
+                                                        <td>2</td>
+                                                        <td>$798</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="me-3">
+                                                                    <span class="avatar avatar-xxl bg-light">
+                                                                        <img src="../assets/images/ecommerce/3.jpg" alt="">
+                                                                    </span>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="mb-1 fs-14 fw-semibold">
+                                                                        <a href="javascript:void(0);">Fparx LL Shoe</a>
+                                                                    </div>
+                                                                    <div class="mb-1">
+                                                                        <span class="me-1 d-inline-flex">Size:</span><span class="text-muted">UK-9</span>
+                                                                    </div>
+                                                                    <div class="mb-1">
+                                                                        <span class="me-1 d-inline-flex">Color:</span><span class="text-muted">Red &amp; White</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript:void(0);" class="text-primary">SPK-1120-D56</a></td>
+                                                        <td>
+                                                            <span class="fs-15 fw-semibold">$799</span>
+                                                        </td>
+                                                        <td>1</td>
+                                                        <td>$799</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2"></td>
+                                                        <td colspan="2">
+                                                            <div class="fw-semibold">Total Items :</div>
+                                                        </td>
+                                                        <td>
+                                                            04
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2"></td>
+                                                        <td colspan="2">
+                                                            <div class="fw-semibold">Sub Total :</div>
+                                                        </td>
+                                                        <td>
+                                                            $5,106
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2"></td>
+                                                        <td colspan="2">
+                                                            <div class="fw-semibold">Applied Coupon :</div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-success-transparent">SPK10F</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2"></td>
+                                                        <td colspan="2">
+                                                            <div class="fw-semibold">Delivery Fees :</div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-danger">+$29</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2"></td>
+                                                        <td colspan="2">
+                                                            <div class="fw-semibold">Total Saved :</div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="fs-14 fw-semibold text-success">$505</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2"></td>
+                                                        <td colspan="2">
+                                                            <div class="fw-semibold">Total Price :</div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="fs-16 fw-semibold">$4,630</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer border-top-0">
+                                        <div class="btn-list float-end">
+                                            <button type="button" class="btn btn-primary btn-wave btn-sm" onclick="javascript:window.print();"><i class="ri-printer-line me-1 align-middle d-inline-block"></i>Print</button>
+                                            <button type="button" class="btn btn-secondary btn-wave btn-sm"><i class="ri-share-forward-line me-1 align-middle d-inline-block"></i>Share Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card custom-card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Order Tracking
+                                </div>
+                                <div class="ms-auto text-success">#SPK-22J63</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="order-track">
+                                    <div class="accordion" id="basicAccordion">
+                                        <div class="accordion-item border-0 bg-transparent">
+                                            <div class="accordion-header" id="headingOne">
+                                                <a class="px-0 pt-0" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#basicOne" aria-expanded="true" aria-controls="basicOne">
+                                                    <div class="d-flex mb-0">
+                                                        <div class="me-2">
+                                                            <span class="avatar avatar-rounded bg-primary">
+                                                                <i class="ri-shopping-cart-line"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="flex-fill">
+                                                            <p class="fw-semibold mb-0 fs-14">Order Placed</p>
+                                                            <span class="fs-11 text-success">Nov 03, 2023</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="basicOne" class="accordion-collapse collapse show border-top-0" aria-labelledby="headingOne" data-bs-parent="#basicAccordion">
+                                                <div class="accordion-body pt-0 ps-5">
+                                                    <div class="fs-11">
+                                                        <p class="mb-0">Order placed successfully by <a href="javascript:void(0);" class="fw-semibold text-primary">Millie Woodward</a></p>
+                                                        <span class="text-muted op-8">Nov 03, 2023, 11:47</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion" id="basicAccordion1">
+                                        <div class="accordion-item border-0 bg-transparent">
+                                            <div class="accordion-header" id="headingTwo">
+                                                <a class="px-0 pt-0" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#basicTwo" aria-expanded="true" aria-controls="basicTwo">
+                                                    <div class="d-flex mb-0">
+                                                        <div class="me-2">
+                                                            <span class="avatar avatar-rounded bg-info">
+                                                                <i class="ri-check-fill fs-18"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="flex-fill">
+                                                            <p class="fw-semibold mb-0 fs-14">Picked</p>
+                                                            <span class="fs-12">Nov 03, 11:55</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="basicTwo" class="accordion-collapse show collapse border-top-0" aria-labelledby="headingTwo" data-bs-parent="#basicAccordion1">
+                                                <div class="accordion-body pt-0 ps-5">
+                                                    <div class="fs-11">
+                                                        <p class="mb-0">Your order has been picked up by <span class="fw-semibold">Smart Good Services</span></p>
+                                                        <span class="text-muted op-8">Nov 03, 2023, 11:58</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion" id="basicAccordion2">
+                                        <div class="accordion-item border-0 bg-transparent">
+                                            <div class="accordion-header" id="headingThree">
+                                                <a class="px-0 pt-0" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#basicThree" aria-expanded="true" aria-controls="basicThree">
+                                                    <div class="d-flex mb-0">
+                                                        <div class="me-2">
+                                                            <span class="avatar avatar-rounded bg-warning">
+                                                                <i class="ri-truck-line"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="flex-fill">
+                                                            <p class="fw-semibold mb-0 fs-14">Shipped</p>
+                                                            <span class="fs-12">Nov 05, 16:58</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="basicThree" class="accordion-collapse show collapse border-top-0" aria-labelledby="headingThree" data-bs-parent="#basicAccordion2">
+                                                <div class="accordion-body pt-0 ps-5">
+                                                    <div class="fs-11 mb-3">
+                                                        <p class="mb-0">Arrived USA <span class="fw-semibold">SGS Warehouse</span></p>
+                                                        <span class="text-muted op-8">Nov 06, 2023, 15:36</span>
+                                                    </div>
+                                                    <div class="fs-11 mb-3">
+                                                        <p class="mb-0">picked up by <span class="fw-semibold">SGS Agent</span> and on the way to Hyderabad</p>
+                                                        <span class="text-muted op-8">Nov 08, 2023, 15:36</span>
+                                                    </div>
+                                                    <div class="fs-11">
+                                                        <p class="mb-0">Arrived in Hyderabad and expected Delivery is <span class="fw-semibold">Nov 16, 2023</span> </p>
+                                                        <span class="text-muted op-8">Nov 16, 2023, 15:36</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion" id="basicAccordion3">
+                                        <div class="accordion-item border-0 bg-transparent next-step">
+                                            <div class="accordion-header" id="headingFour">
+                                                <a class="collapsed px-0 pt-0" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#basicFour" aria-expanded="true" aria-controls="basicFour">
+                                                    <div class="d-flex mb-2">
+                                                        <div class="me-2">
+                                                            <span class="avatar avatar-rounded bg-primary-transparent text-primary border"><i class="fe fe-package fs-12"></i></span>
+                                                        </div>
+                                                        <div class="flex-fill">
+                                                            <p class="fw-semibold mb-0 fs-14">Out For Delivery</p>
+                                                            <span class="text-muted fs-12">Nov 18, 15:10 (expected)</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="basicFour" class="accordion-collapse collapse border-top-0" aria-labelledby="headingFour" data-bs-parent="#basicAccordion3">
+                                                <div class="accordion-body pt-0 ps-5">
+                                                    <div class="fs-11">
+                                                        <p class="mb-0">Your order is out for devlivery</p>
+                                                        <span class="text-muted op-8">Nov 18, 2023, 15:36 (expected)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion" id="basicAccordion4">
+                                        <div class="accordion-item border-0 bg-transparent next-step">
+                                            <div class="accordion-header" id="headingFive">
+                                               <a class="collapsed px-0 pt-0" href="javascript:void(0);" data-bs-toggle="collapse" aria-expanded="true" >
+                                                    <div class="d-flex mb-2">
+                                                        <div class="me-2">
+                                                            <span class="avatar avatar-rounded bg-primary-transparent text-primary border"><i class="fe fe-package fs-12"></i></span>
+                                                        </div>
+                                                        <div class="flex-fill">
+                                                            <p class="fw-semibold mb-0 fs-14">Delivered</p>
+                                                            <span class="fs-12 text-muted">Nov 18, 18:42</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        @SPK@include("partials/headersearch_modal.html")
+        @SPK@include("partials/footer.html")
+
+    </div>
+
+    @SPK@include("partials/commonjs.html")
+
+    @SPK@include("partials/custom_switcherjs.html")
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>

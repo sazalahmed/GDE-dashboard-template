@@ -1,0 +1,266 @@
+@SPK@include("partials/mainhead.html")
+<link rel="stylesheet" href="../assets/libs/quill/quill.snow.css">
+<link rel="stylesheet" href="../assets/libs/quill/quill.bubble.css">
+<link rel="stylesheet" href="../assets/libs/dropzone/dropzone.css">
+
+<!-- FlatPickr CSS -->
+<link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+
+</head>
+
+<body>
+
+    @SPK@include("partials/switcher.html")
+    @SPK@include("partials/loader.html")
+
+    <div class="page">
+        @SPK@include("partials/header.html")
+        @SPK@include("partials/sidebar.html")
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                @SPK@include("partials/page-header.html", {"title": "Edit Task", "subtitle": 'Tasks'})
+
+                <!-- Start::row-1 -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div  class="card custom-card">
+                            <div class="card-header">
+                                <div class="fs-18 fw-normal">Task Info</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-xl-6 mb-4">
+                                        <div class="form-group">
+                                            <label class="form-label text-muted">Title:</label>
+                                            <div class="input-group" id="task-name">
+                                                <input type="text" class="form-control text-dark" placeholder="Enter Your Task" value="Sit sed takimata sanctus invidunt">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-xl-3 mb-4">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <label class="form-label text-muted">Task Category:</label>
+                                                <select class="form-control" id="task-category" data-placeholder="Choose Category..." tabindex="-1" aria-hidden="true" data-trigger>
+                                                    <option value="empty" selected>---</option>
+                                                    <option value="sample">Nonumy</option>
+                                                    <option value="sample">Sea</option>
+                                                    <option value="sample">Vero</option>
+                                                    <option value="sample">Dolore</option>
+                                                    <option value="sample">Lorem</option>
+                                                    <option value="sample">Eos</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-xl-3 mb-4">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <label class="form-label text-muted">Project:</label>
+                                                <select class="form-control" id="project-name1" data-placeholder="Choose Project..." tabindex="-1" aria-hidden="true" data-trigger>
+                                                    <option value="empty">---</option>
+                                                    <option value="sample" selected>Noa Dashboard UI</option>
+                                                    <option value="sample">SAP Development</option>
+                                                    <option value="sample">Data Management</option>
+                                                    <option value="sample">Billing System</option>
+                                                    <option value="sample">User Management Application</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-xl-4 mb-4">
+                                        <div class="form-group">
+                                            <label class="form-label text-muted">Start Date:</label>
+                                            <div id="date1-datepicker" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                <span class="input-group-addon input-group-text bg-primary-transparent border-0"><i class="fe fe-calendar text-primary-dark"></i></span>
+                                                <input type="text" class="form-control date-input" placeholder="DD/MM/YYYY">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-xl-4 mb-4 task-endDate-container">
+                                        <div class="form-group">
+                                            <label class="form-label text-muted">End Date:</label>
+                                            <div id="date2-datepicker" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                <span class="input-group-addon input-group-text bg-primary-transparent border-0"><i class="fe fe-calendar text-primary-dark"></i></span>
+                                                <input type="text" class="form-control date-input" placeholder="DD/MM/YYYY">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-xl-3 mb-4 no-taskEnd-checkbox">
+                                        <div class="form-group">
+                                            <label class="custom-control custom-checkbox no-taskEnd-checkbox-container">
+                                                <input type="checkbox" data-bs-checkboxes="mygroup" class="form-check-input mt-0 me-2" id="checkbox-1" checked>
+                                                <span class="custom-control-label">No End Date.</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-xl-6 mb-4">
+                                        <label class="form-label text-muted">Assign To: </label>
+                                        <div class="form-group">
+                                            <select class="form-control" data-trigger multiple>
+                                                <option value="m-1">Angeline Julliet</option>
+                                                <option value="m-2">Helena Rose</option>
+                                                <option value="m-3">Daniel Obrien</option>
+                                                <option value="m-4" selected>Jorah Randy</option>
+                                                <option value="m-5">Emma Watson</option>
+                                                <option value="m-6">Bonny Benett</option>
+                                                <option value="m-7">Jessie Spears</option>
+                                                <option value="m-8">Skyler Hilda</option>
+                                                <option value="m-9">Randy Orton</option>
+                                                <option value="m-10">Benjamin Button</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-xl-12 mb-4">
+                                        <label class="form-label text-muted">Description: </label>
+                                        <div id="editor">
+                                            <p>Hello SummerNote</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-xl-12">
+                                        <p class="mb-0">
+                                            <a class="collapsed mb-2" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                Other Details <i class="ri-arrow-down-s-line align-middle fs-15"></i>
+                                            </a>
+                                        </p>
+                                        <div class="collapse mt-3" id="collapseExample">
+                                            <div class="row mt-4">
+                                                <div class="col-sm-12 col-md-12 col-xl-4">
+                                                    <div class="form-group mb-4">
+                                                        <label class="form-label text-muted">Task Status:</label>
+                                                        <div class="">
+                                                            <select class="form-control" id="currency-type" data-placeholder="Choose Type..."  data-trigger>
+                                                                <option label="Choose one">---</option>
+                                                                <option value="day" selected>In Progress</option>
+                                                                <option value="day">On Hold</option>
+                                                                <option value="day">Completed</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-12 col-xl-4">
+                                                    <div class="form-group mb-4">
+                                                        <label class="form-label text-muted">Priority:</label>
+                                                        <div class="">
+                                                            <select class="form-control" id="priority" data-placeholder="Choose Type..."  data-trigger>
+                                                                <option label="Choose one">---</option>
+                                                                <option value="day" selected>High</option>
+                                                                <option value="day">Low</option>
+                                                                <option value="day">Normal</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12 col-xl-4 mb-4 d-flex align-items-center">
+                                                    <div class="form-group">
+                                                        <label class="custom-control custom-checkbox d-flex align-items-center">
+                                                            <input type="checkbox" data-bs-checkboxes="mygroup" class="form-check-input me-2" id="checkbox-11">
+                                                            <span class="custom-control-label">Make Private</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-12 col-xl-8 mb-4 d-flex align-items-center">
+                                                    <div class="form-group">
+                                                        <label class="custom-control custom-checkbox d-flex align-items-center">
+                                                            <input type="checkbox" data-bs-checkboxes="mygroup" class="form-check-input me-2" id="checkbox-12">
+                                                            <span class="custom-control-label">Bill Applicable</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-12 col-xl-12 mb-4 d-flex align-items-center">
+                                                    <div class="form-group">
+                                                        <label class="custom-control custom-checkbox d-flex align-items-center">
+                                                            <input type="checkbox" data-bs-checkboxes="mygroup" class="form-check-input mt-0 me-2" id="checkbox-13" checked>
+                                                            <span class="custom-control-label">This Task Is Depended On Another Task</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-12 col-xl-4 mb-4">
+                                                    <div class="form-group">
+                                                        <label class="form-label text-muted">Sub Task:</label>
+                                                        <div class="input-group" id="task-name1">
+                                                            <input type="text" class="form-control text-dark" placeholder="Enter Sub Task" value="Sit sed takimata sanctus invidunt">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-12 col-xl-4 mb-4 task-endDate-container">
+                                                    <div class="form-group">
+                                                        <label class="form-label text-muted">End Date:</label>
+                                                        <div id="date2-datepicker2" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                            <span class="input-group-addon input-group-text bg-primary-transparent border-0"><i class="fe fe-calendar text-primary-dark"></i></span>
+                                                            <input type="text" class="form-control date-input" placeholder="DD/MM/YYYY">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-12 col-xl-4 mb-4 no-taskEnd-checkbox">
+                                                    <div class="form-group">
+                                                        <label class="custom-control custom-checkbox no-taskEnd-checkbox-container">
+                                                            <input type="checkbox" data-bs-checkboxes="mygroup" class="form-check-input mt-0 me-2" id="checkbox-4" checked>
+                                                            <span class="custom-control-label">No End Date.</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <label class="form-label text-muted">Add Files: </label>
+                                                    <div data-single="true" method="post" action="https://httpbin.org/post" class="dropzone"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-list text-end p-2 pe-0">
+                                    <button type="button" class="d-inline-flex align-items-center gap-2 btn btn-outline-danger mb-0">
+                                        <i class="fe fe-x-circle"></i>
+                                        Cancel
+                                    </button>
+                                    <button type="button" class="d-inline-flex align-items-center gap-2 btn btn-primary mb-0">
+                                        <i class="fe fe-check-circle"></i>
+                                        Save
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        @SPK@include("partials/headersearch_modal.html")
+        @SPK@include("partials/footer.html")
+
+    </div>
+
+    @SPK@include("partials/commonjs.html")
+
+    @SPK@include("partials/custom_switcherjs.html")
+
+    <!-- Quill Editor JS -->
+    <script src="../assets/libs/quill/quill.min.js"></script>
+
+    <!-- Dropzone JS -->
+    <script src="../assets/libs/dropzone/dropzone-min.js"></script>
+
+    <!-- Date & Time Picker JS -->
+    <script src="../assets/libs/flatpickr/flatpickr.min.js"></script>
+
+    <!-- Task Edit JS -->
+    <script src="../assets/js/task-edit.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>

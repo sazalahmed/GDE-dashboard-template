@@ -1,0 +1,974 @@
+@SPK@include("partials/mainhead.html")
+<!-- GLightbox CSS -->
+<link rel="stylesheet" href="../assets/libs/glightbox/css/glightbox.min.css">
+
+</head>
+
+<body>
+
+    @SPK@include("partials/switcher.html")
+    @SPK@include("partials/loader.html")
+
+    <div class="page">
+        @SPK@include("partials/header.html")
+        @SPK@include("partials/sidebar.html")
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                @SPK@include("partials/page-header.html", {"title": "Chat", "subtitle": 'Apps'})
+
+                <!-- Start::row-1 -->
+                <div class="row">
+                    <!-- Start::column-1 -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-4">
+                        <div class="card custom-card">
+                            <div class="main-content-app pt-0" id="chat-items-scroll">
+                                <div class="main-content-left main-content-left-chat">
+                                    <div class="card-body p-4 d-flex border-bottom">
+                                        <div class="main-img-user avatar avatar-md avatar-rounded">
+                                            <img alt="" src="../assets/images/faces/6.jpg">
+                                        </div>
+                                        <div class="ms-3">
+                                            <h6 class="fw-normal mb-0 fs-14">Elena Gilbert</h6>
+                                            <span class="dot-label bg-success"></span>
+                                            <small class="fw-normal">Available</small>
+                                        </div>
+                                        <div class="dropdown ms-auto">
+                                            <a aria-label="anchor" class="nav-link text-muted fs-18" href="javascript:void(0);" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="ri-more-2-line"></i>
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-user me-1"></i> Profile</a>
+                                                <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-edit me-1"></i> Edit</a>
+                                                <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-users me-1"></i> New Group</a>
+                                                <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-settings me-1"></i> Settings</a>
+                                                <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-trash-2 me-1"></i> Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-4 border-bottom">
+                                        <div class="input-group mb-2">
+                                            <input type="text" class="form-control" placeholder="Search ...">
+                                            <span class="input-group-text btn btn-primary text-fixed-white">Search</span>
+                                        </div>
+                                        <div class="overflow-hidden p-0">
+                                            <label class="form-label my-2">Online Users</label>
+                                            <div class="d-flex">
+                                                <div>
+                                                    <span class="avatar avatar-md me-2"> <img src="../assets/images/users/5.jpg" alt="img">
+                                                        <span class="avatar-status bg-green"></span>
+                                                    </span>
+                                                    <h6 class="chat-username">Ariana</h6>
+                                                </div>
+                                                <div>
+                                                    <span class="avatar avatar-md me-2"> <img src="../assets/images/users/9.jpg" alt="img">
+                                                        <span class="avatar-status bg-green"></span>
+                                                    </span>
+                                                    <h6 class="chat-username">Monino</h6>
+                                                </div>
+                                                <div>
+                                                    <span class="avatar avatar-md me-2"> <img src="../assets/images/users/6.jpg" alt="img">
+                                                        <span class="avatar-status bg-green"></span>
+                                                    </span>
+                                                    <h6 class="chat-username">Reynante</h6>
+                                                </div>
+                                                <div>
+                                                    <span class="avatar avatar-md me-2"> <img src="../assets/images/users/7.jpg" alt="img">
+                                                        <span class="avatar-status bg-green"></span>
+                                                    </span>
+                                                    <h6 class="chat-username">labares</h6>
+                                                </div>
+                                                <div>
+                                                    <span class="avatar avatar-md me-2"> <img src="../assets/images/users/5.jpg" alt="img">
+                                                        <span class="avatar-status bg-green"></span>
+                                                    </span>
+                                                    <h6 class="chat-username">ronaldo</h6>
+                                                </div>
+                                                <div>
+                                                    <span class="avatar avatar-md bg-primary-transparent text-primary">
+                                                        <i class="fe fe-plus"></i>
+                                                    </span>
+                                                    <h6 class="chat-username mt-2">More</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="nav nav-tabs nav-justified nav-style-1 d-sm-flex d-block px-4 py-3" role="tablist">
+                                            <li class="nav-item me-sm-1 me-0" role="presentation">
+                                                <a class="nav-link m-1 active" data-bs-toggle="tab" role="tab" href="#chat-messages" aria-selected="true">Messages</a>
+                                            </li>
+                                            <li class="nav-item me-sm-1 me-0" role="presentation">
+                                                <a class="nav-link m-1" data-bs-toggle="tab" role="tab" href="#chat-groups" aria-selected="false">Groups</a>
+                                            </li>
+                                            <li class="nav-item me-sm-1 me-0 active" role="presentation">
+                                                <a class="nav-link m-1" data-bs-toggle="tab" role="tab" href="#chat-contacts" aria-selected="false">Contacts</a>
+                                            </li>
+                                            <li class="nav-item me-sm-1 me-0" role="presentation">
+                                                <a class="nav-link m-1" data-bs-toggle="tab" role="tab" href="#chat-networks" aria-selected="false">Networks</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane text-muted active show p-0" id="chat-messages" role="tabpanel">
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/5.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">Raymart Santiago</span>
+                                                            <p class="mb-0 fs-13 text-gray">Hey! there I'm available</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">10 min</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/6.jpg">
+                                                            <span class="badge rounded-pill bg-secondary avatar-badge">3</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">Ariana Monino</span>
+                                                            <p class="mb-0 fs-13 text-gray">Good Morning</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">30 min</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom chat-active">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/1.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">Saul Goodmate</span>
+                                                            <p class="mb-0 fs-13 text-gray">Nice to meet you</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">9.40 am</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md me-3 bg-danger-transparent">
+                                                            J
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">Joyce Chua</span>
+                                                            <p class="mb-0 fs-13 text-gray">Hi, How are you?</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">11.20 am</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/4.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">Rolando Paloso</span>
+                                                            <p class="mb-0 fs-13 text-gray">Hey! there I'm available</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">1.38 pm</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md me-3 bg-primary-transparent">
+                                                            D
+                                                            <span class="badge rounded-pill bg-secondary avatar-badge">1</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">Dexter Dela Cruz</span>
+                                                            <p class="mb-0 fs-13 text-primary">Typing...</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">4.08 pm</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/20.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">maricel Villalon</span>
+                                                            <p class="mb-0 fs-13 text-gray">Hey! there I'm available</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">8.09 pm</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md me-3 bg-success-transparent">
+                                                            M
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">Meryjane Pichon</span>
+                                                            <p class="mb-0 fs-13 text-gray">I have some work</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">1 day ago</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/5.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">Lovely Dela Cruz</span>
+                                                            <p class="mb-0 fs-13 text-gray">I have some work</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">3 days ago</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md me-3 bg-secondary-transparent">
+                                                            <i class="fe fe-user"></i>
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">Daniel Padilla</span>
+                                                            <p class="mb-0 fs-13 text-gray">I have some work</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">5 days ago</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/3.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">John Pratts</span>
+                                                            <p class="mb-0 fs-13 text-gray">I have some work</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">20/06/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/7.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">Socrates Itumay</span>
+                                                            <p class="mb-0 fs-13 text-gray">Hey! there I'm available</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">18/07/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom border-bottom-0">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/6.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fw-semibold fs-14">Samuel Lerin</span>
+                                                            <p class="mb-0 fs-13 text-gray">Hey! there I'm available</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <span class="text-gray fs-11 fw-normal">29/07/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="tab-pane text-muted p-0" id="chat-groups" role="tabpanel">
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/4.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fs-14 fw-semibold">Web Designers</span>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-user-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/4.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fs-14 fw-semibold">Project 2022</span>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-user-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/9.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fs-14 fw-semibold">Project 2023</span>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-user-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom ">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/12.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fs-14 fw-semibold">Freshers</span>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-user-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/6.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fs-14 fw-semibold">Experienced</span>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-user-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/7.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span class="fs-14 fw-semibold">Freelancer</span>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-user-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="text-center p-4">
+                                                    <a href="javascript:void(0);" class="btn btn-outline-primary">Create New Group</a>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane text-muted p-0" id="chat-contacts" role="tabpanel">
+                                                <div class="chat-contacts-title">A</div>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/3.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>Anna Sthesia</span>
+                                                            <p class="mb-0">Home</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-message-square me-2"></i>
+                                                            <i class="text-success fe fe-phone-call me-2"></i>
+                                                            <i class="fs-18 text-danger fe fe-video me-2"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/9.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>Abraham Clark</span>
+                                                            <p class="mb-0">Mobile</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-message-square me-2"></i>
+                                                            <i class="text-success fe fe-phone-call me-2"></i>
+                                                            <i class="fs-18 text-danger fe fe-video me-2"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/4.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>Anderson</span>
+                                                            <p class="mb-0">Office</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-message-square me-2"></i>
+                                                            <i class="text-success fe fe-phone-call me-2"></i>
+                                                            <i class="fs-18 text-danger fe fe-video me-2"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="chat-contacts-title">B</div>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/5.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>Bernadette</span>
+                                                            <p class="mb-0">Mobile</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-message-square me-2"></i>
+                                                            <i class="text-success fe fe-phone-call me-2"></i>
+                                                            <i class="fs-18 text-danger fe fe-video me-2"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="chat-contacts-title">C</div>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/2.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>Cameron Watson</span>
+                                                            <p class="mb-0">Home</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-message-square me-2"></i>
+                                                            <i class="text-success fe fe-phone-call me-2"></i>
+                                                            <i class="fs-18 text-danger fe fe-video me-2"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/20.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>Christopher Arnold</span>
+                                                            <p class="mb-0">Mobile</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-message-square me-2"></i>
+                                                            <i class="text-success fe fe-phone-call me-2"></i>
+                                                            <i class="fs-18 text-danger fe fe-video me-2"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/7.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>Clarkson Gray</span>
+                                                            <p class="mb-0">Home</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-message-square me-2"></i>
+                                                            <i class="text-success fe fe-phone-call me-2"></i>
+                                                            <i class="fs-18 text-danger fe fe-video me-2"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="chat-contacts-title">D</div>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/5.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>Deirdre Short</span>
+                                                            <p class="mb-0">Home</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-message-square me-2"></i>
+                                                            <i class="text-success fe fe-phone-call me-2"></i>
+                                                            <i class="fs-18 text-danger fe fe-video me-2"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/12.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>Dylan Gill</span>
+                                                            <p class="mb-0">Mobile</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-message-square me-2"></i>
+                                                            <i class="text-success fe fe-phone-call me-2"></i>
+                                                            <i class="fs-18 text-danger fe fe-video me-2"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/1.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>Donna Davies</span>
+                                                            <p class="mb-0">Home</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-message-square me-2"></i>
+                                                            <i class="text-success fe fe-phone-call me-2"></i>
+                                                            <i class="fs-18 text-danger fe fe-video me-2"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="chat-contacts-title">E</div>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center chat-hover">
+                                                        <div class="avatar avatar-md avatar-rounded me-3">
+                                                            <img alt="img" src="../assets/images/users/4.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <span>Elizabeth Scott</span>
+                                                            <p class="mb-0">Office</p>
+                                                        </div>
+                                                        <div class="ms-auto">
+                                                            <i class="text-primary fe fe-message-square me-2"></i>
+                                                            <i class="text-success fe fe-phone-call me-2"></i>
+                                                            <i class="fs-18 text-danger fe fe-video me-2"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="tab-pane text-muted p-0" id="chat-networks" role="tabpanel">
+                                                <div class="chat-network-title">Networks <span class="ms-auto"><i class="ri-add-line"></i></span></div>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="ps-2">Work</div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="ps-2">Freelancer</div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="ps-2">Personal</div>
+                                                    </div>
+                                                </a>
+                                                <div class="chat-network-title">Rooms <span class="ms-auto"><i class="ri-add-line"></i></span></div>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="ps-2">Project Managers</div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="ps-2">Designers</div>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0);">
+                                                    <div class="chat-custom align-items-center border-bottom chat-hover">
+                                                        <div class="ps-2">Developers</div>
+                                                    </div>
+                                                </a>
+                                                <div class="chat-network-title">On Hand Talk <span class="ms-auto"><i class="ri-add-line"></i></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End::column-1 -->
+                    <!-- Start::column-2 -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-5">
+                        <div class="card custom-card">
+                            <div class="main-content-app pt-0">
+                                <div>
+                                    <div class="main-chat-header d-block d-sm-flex">
+                                        <div class="d-flex mb-2 mb-sm-0">
+                                            <div class="main-img-user avatar avatar-md avatar-rounded">
+                                                <img alt="" src="../assets/images/users/1.jpg">
+                                            </div>
+                                            <div class="ms-3">
+                                                <h6 class="fw-normal mb-0 fs-14">Saul Goodmate</h6>
+                                                <span class="dot-label bg-success"></span>
+                                                <small class="fw-normal">Online</small>
+                                            </div>
+                                        </div>
+                                        <div class="ms-auto">
+                                            <div>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Search">
+                                                    <button aria-label="button" class="btn ripple btn-primary input-group-text text-fixed-white border-0 lh-1" type="button"><i class="fe fe-search"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-content main-chat-body" id="chat-scroll">
+                                        <div class="p-3 list-unstyled">
+                                            <label class="main-chat-time mt-0">
+                                                <span>2 DAYS AGO</span>
+                                            </label>
+                                            <div class="media flex-row-reverse">
+                                                <div>
+                                                    <span class="avatar avatar-sm avatar-rounded">
+                                                        <img src="../assets/images/users/20.jpg" alt="">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body-right">
+                                                    <div class="main-msg-wrapper-right">
+                                                        Nulla consequat massa quis enim. Donec pede justo, fringilla vel...
+                                                    </div>
+                                                    <div class="main-msg-wrapper-right">
+                                                        rhoncus ut, imperdiet a, venenatis vitae, justo...
+                                                    </div>
+                                                    <div>
+                                                        <span>9:48 am</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div>
+                                                    <span class="avatar avatar-sm avatar-rounded">
+                                                        <img src="../assets/images/users/1.jpg" alt="">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body-left">
+                                                    <div class="main-msg-wrapper-left">
+                                                        Nulla consequat, venenatis vitae massa quis enim. Donec pede justo, fringilla vel...
+                                                    </div>
+                                                    <div>
+                                                        <span>9:59 am</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media flex-row-reverse">
+                                                <div>
+                                                    <span class="avatar avatar-sm avatar-rounded">
+                                                        <img src="../assets/images/users/20.jpg" alt="">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body-right">
+                                                    <div class="main-msg-wrapper-right">
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, fugi magni. Ab aliquam provident eos sint delectus!
+                                                    </div>
+                                                    <div class="main-msg-wrapper-right">
+                                                        <i class="bi bi-card-image  align-middle me-1 text-muted"></i>
+                                                        <span class="text-muted fs-12">Image_attach.jpg</span>
+                                                        <span>
+                                                            <a aria-label="anchor" href="javascript:void(0);"><i class="bi bi-download align-middle ms-2 fs-14"></i></a>
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span>10:02 am</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="main-chat-time mt-2">
+                                                <span>YESTERDAY</span>
+                                            </label>
+                                            <div class="media">
+                                                <div>
+                                                    <span class="avatar avatar-sm avatar-rounded">
+                                                        <img src="../assets/images/users/1.jpg" alt="">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body-left">
+                                                    <div class="main-msg-wrapper-left">
+                                                        Nulla consequat, venenatis vitae massa quis enim. Donec pede justo, fringilla vel...
+                                                    </div>
+                                                    <div>
+                                                        <span>7:03 am</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media flex-row-reverse">
+                                                <div>
+                                                    <span class="avatar avatar-sm avatar-rounded">
+                                                        <img src="../assets/images/users/20.jpg" alt="">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body-right">
+                                                    <div class="main-msg-wrapper-right">
+                                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex consequatur nostrum ut minus quo asperiores quia exercitationem facere molestias maxime molestiae, inventore sint cupiditate.
+                                                    </div>
+                                                    <div class="main-msg-wrapper-right">
+                                                        rhoncus ut, imperdiet a, venenatis vitae, justo...
+                                                    </div>
+                                                    <div>
+                                                        <span>11:33 am</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="main-chat-time mt-2">
+                                                <span>TODAY</span>
+                                            </label>
+                                            <div class="media">
+                                                <div>
+                                                    <span class="avatar avatar-sm avatar-rounded">
+                                                        <img src="../assets/images/users/1.jpg" alt="">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body-left">
+                                                    <div class="main-msg-wrapper-left">
+                                                        Culpa vitae eveniet temporibus numquam quisquam impedit.
+                                                    </div>
+                                                    <div class="main-msg-wrapper-left">
+                                                        <img src="../assets/images/menu-bg-images/bg-img1.jpg" alt="img" class="avatar">
+                                                        <img src="../assets/images/menu-bg-images/bg-img4.jpg" alt="img" class="avatar">
+                                                        <img src="../assets/images/menu-bg-images/bg-img3.jpg" alt="img" class="avatar">
+                                                    </div>
+                                                    <div>
+                                                        <span>12:13 pm</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media flex-row-reverse">
+                                                <div>
+                                                    <span class="avatar avatar-sm avatar-rounded">
+                                                        <img src="../assets/images/users/20.jpg" alt="">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body-right">
+                                                    <div class="main-msg-wrapper-right">
+                                                        rhoncus ut, imperdiet a, venenatis vitae, justo...
+                                                    </div>
+                                                    <div class="main-msg-wrapper-right">
+                                                        Exercitationem facere molestias maxime molestiae, temporibus inventore sint cupiditate.
+                                                    </div>
+                                                    <div>
+                                                        <span>11:33 am</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-chat-footer card-footer">
+                                        <input class="form-control" placeholder="Type your message here..." type="text">
+                                        <a aria-label="anchor" class="btn btn-icon mx-2 btn-outline-primary" href="javascript:void(0);">
+                                            <i class="ri-attachment-2"></i>
+                                        </a>
+                                        <a aria-label="anchor" class="btn btn-primary btn-icon btn-send" href="javascript:void(0);">
+                                            <i class="ri-send-plane-fill"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End::column-2 -->
+                    <!-- Start::column-3 -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-3">
+                        <div class="card custom-card">
+                            <div class="main-content-app" id="chat-profile-scroll">
+                                <div class="card-body pb-0">
+                                    <div class="d-flex">
+                                        <div class="dropdown ms-auto">
+                                            <a aria-label="anchor" class="nav-link text-muted fs-18" href="javascript:void(0);" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="ri-more-2-line"></i>
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-user me-1"></i> Profile</a>
+                                                <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-edit me-1"></i> Edit</a>
+                                                <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-users me-1"></i> New Group</a>
+                                                <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-settings me-1"></i> Settings</a>
+                                                <a class="dropdown-item dropdown-hover" href="javascript:void(0);"><i class="fe fe-trash-2 me-1"></i> Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center pb-4">
+                                        <div>
+                                            <span class="avatar avatar-rounded avatar-xl"><img src="../assets/images/users/1.jpg" alt="img"></span>
+                                            <div class="pt-2">
+                                                <h6 class="mb-1 text-dark fw-semibold">Saul Goodmate</h6>
+                                                <span class="dot-label bg-success"></span>
+                                                <small class="fw-normal">Available</small>
+                                                <p class="text-muted mb-1 pt-0 fs-13">Senior Web Designer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-2">
+                                        <h6 class="fs-13 mb-3">Contact Details :</h6>
+                                        <div class="d-flex mb-1">
+                                            <div>
+                                                <a aria-label="anchor" class="btn btn-icon btn-md btn-outline-light rounded-pill me-2" href="javascript:void(0);"><i class="fe fe-mail align-middle"></i></a>
+                                            </div>
+                                            <div class="ms-2">
+                                                <p class="fs-13 fw-semibold mb-0 text-muted">Email</p>
+                                                <p class="fs-12 text-muted">elenagilbert@spruko.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex my-1">
+                                            <div>
+                                                <a aria-label="anchor" class="btn btn-icon btn-md btn-outline-light rounded-pill me-2" href="javascript:void(0);"><i class="fe fe-phone align-middle"></i></a>
+                                            </div>
+                                            <div class="ms-2">
+                                                <p class="fs-13 fw-semibold mb-0 text-muted">Phone</p>
+                                                <p class="fs-12 text-muted">+773(11)-16-337.</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex my-1">
+                                            <div>
+                                                <a aria-label="anchor" class="btn btn-icon btn-md btn-outline-light rounded-pill me-2" href="javascript:void(0);"><i class="fe fe-map-pin align-middle"></i></a>
+                                            </div>
+                                            <div class="ms-2">
+                                                <p class="fs-13 fw-semibold mb-0 text-muted">Address</p>
+                                                <p class="fs-12 text-muted">2nd street,houston texas,united states.</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex my-1">
+                                            <div>
+                                                <a aria-label="anchor" class="btn btn-icon btn-md btn-outline-light rounded-pill me-2" href="javascript:void(0);"><i class="fe fe-linkedin align-middle"></i></a>
+                                            </div>
+                                            <div class="ms-2">
+                                                <p class="fs-13 fw-semibold mb-0 text-muted">Linkedin</p>
+                                                <p class="fs-12 text-muted">@895434</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-2">
+                                        <h6 class="fs-13 mb-3">Shared Files :</h6>
+                                        <div class="border-0 p-0 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="me-2">
+                                                    <span class="btn btn-icon btn-outline-light"><i class="ri-folder-open-fill align-middle"></i></span>
+                                                </div>
+                                                <div class="d-block w-100">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="mt-0">
+                                                            <h5 class="mb-1 fs-13 fw-semibold">Demo_Document</h5>
+                                                            <p class="mb-0 fs-13 text-muted">ppt<span class="fs-11 ms-2">1.2 mb</span></p>
+                                                        </div>
+                                                        <a href="javascript:void(0);" class="ms-auto fs-14 text-default" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Download" aria-label="Download"><i class="fe fe-download"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="border-0 p-0 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="me-2">
+                                                    <span class="btn btn-icon btn-outline-light"><i class="ri-image-2-fill align-middle"></i></span>
+                                                </div>
+                                                <div class="d-block w-100">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="mt-0">
+                                                            <h5 class="mb-1 fs-13 fw-semibold">Image_attachment</h5>
+                                                            <p class="mb-0 fs-13 text-muted">img<span class="fs-11 ms-2">12 mb</span></p>
+                                                        </div>
+                                                        <a href="javascript:void(0);" class="ms-auto fs-14 text-default" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Download" aria-label="Download"><i class="fe fe-download"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="border-0 p-0 mb-0">
+                                            <div class="d-flex align-items-center">
+                                                <div class="me-2">
+                                                    <span class="btn btn-icon btn-outline-light"><i class="ri-mail-fill align-middle"></i></span>
+                                                </div>
+                                                <div class="d-block w-100">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="mt-0">
+                                                            <h5 class="mb-1 fs-13 fw-semibold"> Video_attachment</h5>
+                                                            <p class="mb-0 fs-13 text-muted">Video<span class="fs-12 ms-2">16 mb</span></p>
+                                                        </div>
+                                                        <a href="javascript:void(0);" class="ms-auto fs-14 text-default" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Download" aria-label="Download"><i class="fe fe-download"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-2">
+                                        <h5 class="fs-16 mb-3">Media :</h5>
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-2 col-md-3 col-4">
+                                                <div class="card custom-card border">
+                                                    <img src="../assets/images/files/doc.png" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-2 col-md-3 col-4">
+                                                <div class="card custom-card border">
+                                                    <img src="../assets/images/files/file.png" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-2 col-md-3 col-4">
+                                                <div class="card custom-card border">
+                                                    <img src="../assets/images/files/image.png" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-2 col-md-3 col-4">
+                                                <div class="card custom-card border">
+                                                    <img src="../assets/images/files/ppt.png" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-2 col-md-3 col-4">
+                                                <div class="card custom-card border">
+                                                    <img src="../assets/images/files/word.png" alt="img">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-2 col-md-3 col-4">
+                                                <div class="card custom-card border">
+                                                    <img src="../assets/images/files/zip.png" alt="img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End::column-3 -->
+                </div>
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        @SPK@include("partials/headersearch_modal.html")
+        @SPK@include("partials/footer.html")
+
+    </div>
+
+    @SPK@include("partials/commonjs.html")
+
+    @SPK@include("partials/custom_switcherjs.html")
+
+    <!-- Gallery JS -->
+    <script src="../assets/libs/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/js/gallery.js"></script>
+
+    <!-- Chat JS -->
+    <script src="../assets/js/chat.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>
